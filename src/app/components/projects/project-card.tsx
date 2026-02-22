@@ -16,8 +16,8 @@ import { MouseEvent, useRef, useState } from "react";
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const firstImage = project.images?.[0];
   const [showAllTags, setShowAllTags] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const cardRef = useRef<HTMLDivElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
 
   const maxVisibleTags = 5;
   const hasMoreTags = project.tools.length > maxVisibleTags;
@@ -25,13 +25,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     ? project.tools
     : project.tools.slice(0, maxVisibleTags);
 
+  // useRef statt useState → kein Re-render bei jeder Mausbewegung
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
+    if (!cardRef.current || !glowRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
-    setMousePosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    glowRef.current.style.background = `radial-gradient(600px circle at ${x}px ${y}px, rgba(16, 185, 129, 0.1), transparent 40%)`;
   };
 
   // Helper function to check if project is less than a month old
@@ -58,10 +58,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     >
       {/* Spotlight Effect */}
       <div
+        ref={glowRef}
         className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
-        style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(16, 185, 129, 0.1), transparent 40%)`,
-        }}
       />
 
       <Card className="relative flex flex-col h-full justify-between border border-white/10 bg-[#050505]/20 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden transition-all duration-500 hover:border-cyan-600/50 hover:shadow-cyan-600/10">
@@ -85,6 +83,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                 width={800}
                 height={450}
                 alt={project.name}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             ) : (

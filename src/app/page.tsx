@@ -1,12 +1,15 @@
-import About from "./components/about/page";
-import Contact from "./components/contact/index";
-import Experience from "./components/experience/page";
+import dynamic from "next/dynamic";
 import HeroSection from "./components/hero-section/page";
-import Projects from "./components/projects/index";
-import Skills from "./components/skills/page";
-import SectionReveal from "./components/SectionReveal";
-
 import "./css/card.css";
+
+// Below-the-fold sections: JS code-split → initiales Bundle deutlich kleiner.
+// SSR rendert weiterhin HTML → SEO bleibt erhalten.
+const About = dynamic(() => import("./components/about/page"));
+const Experience = dynamic(() => import("./components/experience/page"));
+const Skills = dynamic(() => import("./components/skills/page"));
+const Projects = dynamic(() => import("./components/projects/index"));
+const Contact = dynamic(() => import("./components/contact/index"));
+const SectionReveal = dynamic(() => import("./components/SectionReveal"));
 export default function Home() {
   return (
     <>

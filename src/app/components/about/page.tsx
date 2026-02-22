@@ -2,7 +2,7 @@
 import { personalData } from "@/../utils/Data/PersonalData";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { SplitText } from "gsap/dist/SplitText";
 import { User, Sparkles } from "lucide-react";
 
@@ -70,14 +70,14 @@ function About() {
 
           <div className="flex flex-wrap gap-8 items-center mt-4">
             <div className="flex flex-col">
-              <span className="text-3xl font-black text-white">3+</span>
+              <span className="text-3xl font-black text-white">4+</span>
               <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
                 Years Experience
               </span>
             </div>
             <div className="w-[1px] h-10 bg-white/10" />
             <div className="flex flex-col">
-              <span className="text-3xl font-black text-white">4+</span>
+              <span className="text-3xl font-black text-white">10+</span>
               <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
                 Projects Completed
               </span>

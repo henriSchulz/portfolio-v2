@@ -6,6 +6,12 @@ import {
 /** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 828, 1080, 1200],
+    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 Tage
+  },
+  compress: true,
 };
 
 const nextConfigFunction = async (phase: string) => {

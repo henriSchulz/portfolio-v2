@@ -30,8 +30,8 @@ const HeroSection = () => {
         )
         .fromTo(
           ".hero-heading",
-          { opacity: 0, scale: 0.95 },
-          { opacity: 1, scale: 1, duration: 1, ease: "power4.out" },
+          { scale: 0.95 },
+          { scale: 1, duration: 1, ease: "power4.out" },
           "-=0.5",
         )
         .fromTo(
