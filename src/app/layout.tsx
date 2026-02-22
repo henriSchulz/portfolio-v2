@@ -27,11 +27,11 @@ export const metadata: Metadata = {
     template: "%s | Henri Schulz",
   },
   description:
-    "Portfolio von Henri Schulz – Student der Elektrotechnik und Informationstechnik am KIT. Spezialisiert auf Hardware-Design, Verilog, ASIC-Entwicklung und Full-Stack-Webentwicklung.",
+    "Portfolio of Henri Schulz – Electrical Engineering and IT student at KIT.",
   keywords: [
     "Henri Schulz",
-    "Elektrotechnik",
     "Electrical Engineering",
+    "IT",
     "KIT Karlsruhe",
     "Verilog",
     "Hardware Design",
@@ -48,25 +48,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Henri Schulz | Personal Portfolio",
     description:
-      "Elektrotechnik & Software-Entwicklung – an der Schnittstelle von Hardware und Software.",
+      "Electrical Engineering & Software Development – building at the intersection of hardware and software.",
     url: "https://henrischulz.com",
     siteName: "Henri Schulz Portfolio",
-    images: [
-      {
-        url: "/Website-overview.png",
-        width: 1200,
-        height: 630,
-        alt: "Henri Schulz Portfolio Übersicht",
-      },
-    ],
-    locale: "de_DE",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Henri Schulz | Portfolio",
-    description: "Elektrotechnik & Software-Entwicklung am KIT.",
-    images: ["/Website-overview.png"],
+    description: "Electrical Engineering and IT Student at KIT Karlsruhe.",
   },
   robots: {
     index: true,
