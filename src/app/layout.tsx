@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Henri Schulz",
   },
   description:
-    "Portfolio of Henri Schulz – Electrical Engineering and IT student at KIT.",
+    "Portfolio of Henri Schulz – EE & IT Student at KIT and Full Stack Web Developer based in Karlsruhe.",
   keywords: [
     "Henri Schulz",
     "Electrical Engineering",
@@ -35,8 +35,10 @@ export const metadata: Metadata = {
     "KIT Karlsruhe",
     "Verilog",
     "Hardware Design",
-    "ASIC",
+
     "Full Stack Developer",
+    "Full Stack Web Developer",
+    "Web Developer Karlsruhe",
     "Software Engineer",
     "Next.js",
     "TypeScript",
@@ -48,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Henri Schulz | Personal Portfolio",
     description:
-      "Electrical Engineering & Software Development – building at the intersection of hardware and software.",
+      "EE & IT Student at KIT and Full Stack Web Developer – building at the intersection of hardware and software.",
     url: "https://henrischulz.com",
     siteName: "Henri Schulz Portfolio",
     locale: "en_US",
@@ -57,7 +59,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Henri Schulz | Portfolio",
-    description: "Electrical Engineering and IT Student at KIT Karlsruhe.",
+    description:
+      "EE & IT Student at KIT and Full Stack Web Developer based in Karlsruhe.",
   },
   robots: {
     index: true,
@@ -85,7 +88,7 @@ export default function RootLayout({
     name: "Henri Schulz",
     url: "https://henrischulz.com",
     email: "henri.schulz.bs@icloud.com",
-    jobTitle: "Electrical Engineering & IT Student",
+    jobTitle: "EE & IT Student | Full Stack Web Developer",
     worksFor: {
       "@type": "Organization",
       name: "Karlsruher Institut für Technologie (KIT)",
@@ -100,7 +103,7 @@ export default function RootLayout({
       "Electrical Engineering",
       "Hardware Design",
       "Verilog",
-      "ASIC Design",
+
       "Full-Stack Web Development",
       "TypeScript",
       "Next.js",
