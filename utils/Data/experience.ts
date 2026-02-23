@@ -28,16 +28,7 @@ export const experiences = [
   //     "Improved performance, data handling, and API reliability across the full stack.",
   //   ],
   // },
-  {
-    id: 4,
-    title: "Freelance Web Developer",
-    company: "Self-employed (Remote)",
-    duration: "(September 2025 – Present)",
-    details: [
-      "Developing custom web applications for clients on a freelance basis",
-      "Building responsive frontends using React.js and modern web technologies",
-    ],
-  },
+
   {
     id: 3,
     title: "Student Research Assistant",
@@ -51,6 +42,16 @@ export const experiences = [
       label: "About KATRIN",
       url: "https://en.wikipedia.org/wiki/KATRIN",
     },
+  },
+  {
+    id: 4,
+    title: "Freelance Web Developer",
+    company: "Self-employed (Remote)",
+    duration: "(August 2025 – Present)",
+    details: [
+      "Developing custom web applications for clients on a freelance basis",
+      "Building responsive frontends using React.js and modern web technologies",
+    ],
   },
   {
     id: 2,
